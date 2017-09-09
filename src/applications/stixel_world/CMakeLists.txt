@@ -20,6 +20,8 @@ set(CMAKE_MODULE_PATH "./" ${doppia_root} ${CMAKE_MODULE_PATH})
 set(CMAKE_MODULE_PATH "/home/rodrigob/work/code/doppia_references/cuda/FindCUDA/CMake/cuda" ${CMAKE_MODULE_PATH})
 set(CMAKE_MODULE_PATH "/users/visics/rbenenso/code/references/cuda/FindCUDA/CMake/cuda" ${CMAKE_MODULE_PATH})
 
+set(CMAKE_CXX_FLAGS_RELEASE "-O3 -DNDEBUG -Dint_p_NULL='\(\(int*\)0\)'")
+
 # ----------------------------------------------------------------------
 # Setup the project
 include(FindPkgConfig)

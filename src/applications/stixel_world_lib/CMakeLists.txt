@@ -15,6 +15,8 @@ set(doppia_root "${CMAKE_CURRENT_LIST_DIR}/../../..")
 set(CMAKE_MODULE_PATH $ENV{CMAKE_MODULE_PATH})
 set(CMAKE_MODULE_PATH "./" ${doppia_root} ${CMAKE_MODULE_PATH})
 
+set(CMAKE_CXX_FLAGS_RELEASE "-O3 -DNDEBUG -Dint_p_NULL='\(\(int*\)0\)'")
+
 include(FindPkgConfig)
 project (StixelWorldLib)
 

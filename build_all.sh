@@ -5,7 +5,7 @@
 set -x  # will print excecuted commands
 
 # change num threads depending on available RAM and Cpu cores.
-NUM_THREADS=6
+NUM_THREADS=16
 
 build_all()
 {

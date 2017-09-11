@@ -1,3 +1,7 @@
+
+src/applications/boosted_learning/InriaPerson_octave_0_train/*
+applications/video_ped_detection/video_ped_detection
+
 # use glob syntax.
 syntax: glob
 

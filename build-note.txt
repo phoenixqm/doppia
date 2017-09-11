@@ -1,4 +1,7 @@
 
+current system using boost version 1_55, using gcc-4.4
+
+
 INSTALL REQUIRED PACKAGES
 
 sudo apt-get update
@@ -47,8 +50,14 @@ cmake . && make -j16
 
 OMP_NUM_THREADS=16 ./objects_detection -c cvpr2012_very_fast_over_bahnhof.config.ini --gui.disable false
 OMP_NUM_THREADS=16 ./objects_detection -c cvpr2012_inria_pedestrians.config.ini --gui.disable false
-
 OMP_NUM_THREADS=16 ./objects_detection -c cvpr2012_chnftrs_over_bahnhof.config.ini --gui.disable false
+
 OMP_NUM_THREADS=16 ./objects_detection -c eccv2014_face_detection_pascal.config.ini --gui.disable false
 
 ref: https://bitbucket.org/rodrigob/doppia/
+
+
+using own init file:
+
+OMP_NUM_THREADS=16 ./objects_detection -c my_very_fast_over_bahnhof.config.ini --gui.disable false
+

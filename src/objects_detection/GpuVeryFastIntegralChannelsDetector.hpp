@@ -85,6 +85,7 @@ protected:
 
     /// for debugging
     friend class ObjectsDetectionGui;
+    friend class PedDetectionGui;
 };
 
 } // end of namespace doppia

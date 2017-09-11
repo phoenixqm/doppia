@@ -1,12 +1,10 @@
 
 .hg/
-/home/qiming/Pedestrian/doppia/src/applications/boosted_learning/InriaPerson_octave_0_train
+
+src/applications/boosted_learning/InriaPerson_octave_0_train
 src/applications/video_ped_detection/CMakeFiles
 
 src/applications/video_ped_detection/video_ped_detection
-
-# use glob syntax.
-syntax: glob
 
 applications/doppia/doppia
 applications/simple_stereo/simple_stereo
@@ -80,18 +78,6 @@ src/applications/linear_svm_learning/inria_model*.txt
 *.a
 *.o
 *.so
-
-*.exr
-*.png
-*.pgm
-*.pnm
-*.jpg
-*.tif
-*.svg
-*.avi
-*.mp4
-*.pdf
-*.submit
 
 *~
 *.pidb
@@ -209,6 +195,7 @@ src/applications/video_input/CMakeFiles/
 src/applications/video_input/Makefile
 src/applications/video_input/cmake_install.cmake
 src/applications/video_input/video_input
+
 
 
 

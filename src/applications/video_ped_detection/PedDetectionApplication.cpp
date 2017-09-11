@@ -115,7 +115,7 @@ program_options::options_description PedDetectionApplication::get_options_descri
 {
     program_options::options_description desc("PedDetectionApplication options");
 
-    const std::string application_name = "objects_detection";
+    const std::string application_name = "video_ped_detection";
     BaseApplication::add_args_options(desc, application_name);
 
     desc.add_options()
@@ -377,8 +377,9 @@ void PedDetectionApplication::main_loop()
 
     boost::thread stixel_world_estimator_thread;
 
+
     // initialized stixels_from_previous_frame
-    if(stixel_world_estimator_p)
+    if (stixel_world_estimator_p)
     {
         // set the input for stixels and objects detection
         AbstractVideoInput::input_image_view_t
@@ -394,7 +395,7 @@ void PedDetectionApplication::main_loop()
         // this is equivalent to calling stixel_world_estimator_p->compute();
     }
 
-    if(objects_tracker_p)
+    if (objects_tracker_p)
     {
         AbstractVideoInput::input_image_view_t left_view(video_input_p->get_left_image());
         objects_tracker_p->set_image_size(left_view.width(), left_view.height());
@@ -404,7 +405,7 @@ void PedDetectionApplication::main_loop()
 
     bool end_of_game = false;
 
-    while(video_input_is_available and (not end_of_game))
+    while (video_input_is_available and (not end_of_game))
     {
 
         // update video input --
@@ -527,6 +528,9 @@ void PedDetectionApplication::main_loop()
         {
             video_input_is_available = video_input_p->next_frame();
         }
+    
+        getchar(); // to make a pause
+
     } // end of "while video input and not end of game"
 
     stixel_world_estimator_thread.interrupt(); // stop the computation thread

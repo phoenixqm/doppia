@@ -295,13 +295,15 @@ void update_search_range(const AbstractObjectsDetector::ground_plane_corridor_t 
         if(updated_width > max_reasonable_width_or_height) // sanity check
         {
             printf("scale index == %zi, updated_width == %i\n", scale_index, updated_width);
-            throw std::runtime_error("updated_width seems unreasonably high");
+            printf("Warning: updated_width seems unreasonably high");
+            // throw std::runtime_error("updated_width seems unreasonably high");
         }
 
         if(updated_height > max_reasonable_width_or_height) // sanity check
         {
             printf("scale index == %zi, updated_height == %i\n", scale_index, updated_height);
-            throw std::runtime_error("updated_height seems unreasonably high");
+            printf("Warning: updated_height seems unreasonably high");
+            // throw std::runtime_error("updated_height seems unreasonably high");
         }
 
         if(first_call)
